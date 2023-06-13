@@ -1,0 +1,228 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+\usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{roboto}
+\usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+% \usepackage{nunito}
+% \usepackage[default]{lato}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.25in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Lian Duan} \\ \vspace{1pt}
+    \small Canadian Citizen $|$  778-709-9416 $|$ \href{mailto:LianD@student.ubc.ca}{\underline{LianD@student.ubc.ca}} $|$ 
+    \href{https://linkedin.com/in/LianDu}{\underline{linkedin.com/in/LianDu}} $|$
+    \href{https://github.com/Lian-D}{\underline{github.com/Lian-D}} 
+    % $|$
+    %  \small Canadian Citizen
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {SAP HANA and Analytics}{\textbf{September 2021 -- April 2022}}
+      {Agile Developer Intern (Infrastructure Team)}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Enabled broad overview of micro-service deployment statuses by implementing a deployment dashboard, allowing for rapid response of team members to failing deployments by cutting search times by up to 75\%}
+        \resumeItem{Worked on automation for verification and whitelisting of valid API requests for SAP HANA’s Data Collection Service, responsible for ingesting and aggregating data within SAP micro-services}
+         \resumeItem{Updated, maintained and deployed micro-services belonging to the SAP S4/HANA Enterprise Resource Planning (ERP) suite utilized by over 17,500 companies globally to provide real time analytics for their data.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {FORM} {\textbf{April 2020 -- September 2020}}
+      {Web Software Developer Intern}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Developed, updated and maintained back-end REST API routes utilized by the mobile app for 45,000+ active swimmers using TypeScript, MySQL and AWS services.}
+        \resumeItem{Implemented database, back-end, and API support for ``Verified'' and ``Professional'' displayable user badges showcased in the mobile app using Express and Sequelize.}
+        \resumeItem{Set up staff alerts on production firmware releases, increasing automation release coverage by 66\% by using AWS Lambda functions with delivery through AWS SES.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LedgerDocs}{\textbf{September 2019 -- April 2020}}
+      {Web Applications Developer Intern}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Reduced the load on server instances by up to 99.7\% and eliminated server crashing occurrences by implementing a job queue system to distribute high CPU consumption during peak processing hours.}
+        \resumeItem{Implemented an Optical Character Recognition (OCR) system responsible for the reading, processing, and parsing of 30,000+ photographic invoices per annual quarter by including Tesseract onto the existing codebase.}
+        \resumeItem{Prototyped user SMS document uploading to the web application using a Twilio client and REST API built onto existing backend infrastructure.}
+      \resumeItemListEnd
+
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    % \resumeSubheading
+    %   {Information Technology Support Specialist}{Sep. 2018 -- Present}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Communicate with managers to set up campus computers used on campus}
+    %     \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
+    %     \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+    % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+ %-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University Of British Columbia}{Vancouver, BC}
+      {BSc, Computer Science: 3.75 Upper Level GPA}{Expected Graduation May 2023}
+  \resumeSubHeadingListEnd
+
+  
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+          \resumeProjectHeading
+          {\textbf{PyeadCrab} $|$ \emph{Python, PythonAST, React, HTML Canvas}}{\textbf{December 2022}}
+          \resumeItemListStart
+            \resumeItem{Lead the development on a team to write a python codebase cluster analysis and visualization CLI tool by overseeing planning, architecture development and deadlines in addition to writing critical code modules.}
+            \resumeItem{Implemented static analysis component through AST exploration on files, grabbing relevant information regarding classes, files and call sequences which enabled visualization on collected data.}
+            \resumeItem{Consulted and assisted in building dynamic logger which injects tracer code into python repositories and logged critical function caller, callee and class information for analysis.}
+          \resumeItemListEnd
+
+                    \resumeProjectHeading
+          {\textbf{Walmart Mario Maker} $|$ \emph{TypeScript, Express, React, JavaScript}}{\textbf{November 2022}}
+          \resumeItemListStart
+            \resumeItem{Worked on a team to write a domain-specific language and engine implemented with Express and React that allowed users to write platformer games in a JSON-like format.}
+            \resumeItem{Implemented dynamic conditional statements and actions such that user can provide an array of conditions to be checked with an array of actions to perform on pass.}
+            \resumeItem{Built static analysis tool intended for language sanity and legality checks.}
+          \resumeItemListEnd
+
+      % \resumeProjectHeading
+      %     {\textbf{Insight UBC} $|$ \emph{TypeScript, Express, HTML, JavaScript}}{\textbf{November 2020}}
+      %     \resumeItemListStart
+      %       \resumeItem{Implemented a query engine that processed a user-provided query in a domain-specific language that enabled users to explore and UBC course information using back-end and front-end services}
+      %       \resumeItem{Wrote file read and cache system that stored relevant data in file trees of JSONs for back-end access.}
+      %     \resumeItemListEnd
+          
+      % \resumeProjectHeading
+      %     {\textbf{Aqueduct} $|$ \emph{JavaScript, MongoDB, RiveScript, Express, Google Cloud Services}}{\textbf{January 2020}}
+      %     \resumeItemListStart
+      %       \resumeItem{Developed a Node.JS application that replies to SMS messages with relevant online information without users requiring internet access by utilizing Twilio and web scraping libraries.}
+      %     \resumeItemListEnd
+
+     %      {\textbf{Summary.JS} $|$ \emph{JavaScript, Node.js}}{https://github.com/Lian-D/Summary.js}
+     %      \resumeItemListStart
+     %        \resumeItem{A package library that allows for article condensing using the RAKE and Text-Rank Algorithms.}
+     %        \resumeItem{Hosted demo through GitHub static pages.}
+     %      \resumeItemListEnd
+     % \resumeProjectHeading
+     %      {\textbf{Uni-Pass} $|$ \emph{Java}}{https://github.com/Lian-D/Unipass}
+     %      \resumeItemListStart
+     %        \resumeItem{A password manager that encrypts passwords with PBE hash sets to store, retrieve and manipulate login data.}
+     %        \resumeItem{Utilized JavaFx to create an interactive UI using Stages, ListViews, Inputs and Alerts.}
+     %      \resumeItemListEnd          
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages: }{ TypeScript, JavaScript, Python, Java, C++, SQL, PHP, HTML+CSS} \\
+     \textbf{Frameworks/Libraries: }{Node, Express, Java Spring, D3, Vue.js, OAuth, JQuery} \\
+     \textbf{Technical Tools: } {Git, Jira, Jenkins, Cloud Foundry, Oracle Cloud, AWS SES, Brew, Maven} \\
+     \textbf{Testing Tools: }{Jest, Mocha, Chai, Postman, JUnit} \\
+     \textbf{Enviroments: }{MacOS, Linux (CentOS \& Ubuntu)} \\
+    }}
+ \end{itemize}
+\end{document}
